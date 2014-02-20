@@ -6,7 +6,7 @@ class Nanoc::Asciidoctor::FilterTest < Minitest::Test
 
   def test_filter
     # Create filter
-    filter = ::Nanoc::Filters::AsciiDoc.new
+    filter = ::Nanoc::Asciidoctor::Filter.new
 
     # Run filter
     result = filter.setup_and_run("== Blah blah")

@@ -1,5 +1,8 @@
 # encoding: utf-8
 
+require 'asciidoctor'
+require 'erb'
+
 module Nanoc::Asciidoctor
 
   class Filter < Nanoc::Filter
