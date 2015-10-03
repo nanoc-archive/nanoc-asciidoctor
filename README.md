@@ -12,8 +12,18 @@ This provides a filter for [Asciidoctor](http://asciidoctor.org/), a Ruby proces
 
 ## Usage
 
+On the `Rules` file, require the library, and call as you prefer:
+
 ```ruby
-filter :asciidoctor
+require 'nanoc-asciidoctor'
+
+compile '/**/*.adoc' do
+  filter :asciidoctor
+  layout '/default.*'
+  # Or wrap the markup in full HTML through AsciiDoctor
+  # filter :asciidoctor, :header_footer => true
+end
+
 ```
 
 Options passed to this filter will be passed on to `Asciidoctor.render`.
