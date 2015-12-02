@@ -1,18 +1,13 @@
-# encoding: utf-8
-
 require 'asciidoctor'
-require 'erb'
 
-module Nanoc::Asciidoctor
+module Nanoc
+  module Asciidoctor
+    class Filter < Nanoc::Filter
+      identifier :asciidoctor
 
-  class Filter < Nanoc::Filter
-
-    identifier :asciidoctor
-
-    def run(content, params={})
-      Asciidoctor.render(content, params)
+      def run(content, params = {})
+        ::Asciidoctor.render(content, params)
+      end
     end
-
   end
-
 end
