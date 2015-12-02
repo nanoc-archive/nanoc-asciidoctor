@@ -23,7 +23,6 @@ compile '/**/*.adoc' do
   # Or wrap the markup in full HTML through AsciiDoctor
   # filter :asciidoctor, :header_footer => true
 end
-
 ```
 
 Options passed to this filter will be passed on to `Asciidoctor.render`.

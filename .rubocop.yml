@@ -1,0 +1,6 @@
+FileName:
+  Exclude:
+    - 'lib/nanoc-asciidoctor.rb'
+
+Documentation:
+  Enabled: false
