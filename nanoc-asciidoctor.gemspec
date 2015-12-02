@@ -16,13 +16,11 @@ Gem::Specification.new do |s|
 
   s.required_ruby_version = '>= 1.9.3'
 
-  s.files              = Dir['[A-Z]*'] +
-                         Dir['{lib,test}/**/*'] +
-                         [ 'nanoc-asciidoctor.gemspec' ]
-  s.require_paths      = [ 'lib' ]
+  s.files = Dir['[A-Z]*'] + Dir['{lib,spec}/**/*'] + ['nanoc-asciidoctor.gemspec']
+  s.require_paths = ['lib']
 
-  s.rdoc_options     = [ '--main', 'README.md' ]
-  s.extra_rdoc_files = [ 'LICENSE', 'README.md', 'NEWS.md' ]
+  s.rdoc_options = ['--main', 'README.md']
+  s.extra_rdoc_files = ['LICENSE', 'README.md', 'NEWS.md']
 
   s.add_runtime_dependency('nanoc', '>= 3.6.7', '< 5.0.0')
   s.add_runtime_dependency('asciidoctor', '> 0.1', '< 2.0')

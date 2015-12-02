@@ -10,7 +10,6 @@ end
 
 RuboCop::RakeTask.new(:rubocop) do |task|
   task.options  = %w( --display-cop-names --format simple )
-  task.patterns = ['lib/**/*.rb', 'test/**/*.rb']
 end
 
 task :default => [:spec, :rubocop]
