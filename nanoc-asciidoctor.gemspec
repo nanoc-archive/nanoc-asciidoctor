@@ -1,5 +1,3 @@
-# encoding: utf-8
-
 $LOAD_PATH.unshift(File.expand_path('../lib/', __FILE__))
 require 'nanoc/asciidoctor/version'
 
@@ -16,7 +14,10 @@ Gem::Specification.new do |s|
 
   s.required_ruby_version = '>= 1.9.3'
 
-  s.files = Dir['[A-Z]*'] + Dir['{lib,spec}/**/*'] + ['nanoc-asciidoctor.gemspec']
+  s.files =
+    Dir['[A-Z]*'] +
+    Dir['{lib,spec}/**/*'] +
+    ['nanoc-asciidoctor.gemspec']
   s.require_paths = ['lib']
 
   s.rdoc_options = ['--main', 'README.md']
