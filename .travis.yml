@@ -1,8 +1,10 @@
 language: ruby
 rvm:
-  - 2.1.0
-  - 2.0.0
-  - 1.9.3
+  - 2.1.2
+  - 2.2.2
+branches:
+  only:
+    - "master"
 notifications:
   irc:
     channels:
@@ -11,3 +13,7 @@ notifications:
       - "%{repository}/%{branch} %{commit} %{author}: %{message}"
     use_notice: true
     skip_join: true
+cache: bundler
+sudo: false
+git:
+  depth: 10
