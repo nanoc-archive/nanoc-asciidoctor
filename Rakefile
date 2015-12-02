@@ -1,11 +1,11 @@
 # encoding: utf-8
 
-require 'rake/testtask'
 require 'rubocop/rake_task'
+require 'rspec/core/rake_task'
 
-Rake::TestTask.new do |t|
-  t.libs = %w( lib test )
-  t.test_files = FileList['test/**/test_*.rb', 'test/**/*_spec.rb']
+RSpec::Core::RakeTask.new(:spec) do |t|
+  t.rspec_opts = '-r ./spec/spec_helper.rb --color'
+  t.verbose = false
 end
 
 RuboCop::RakeTask.new(:rubocop) do |task|
@@ -13,4 +13,4 @@ RuboCop::RakeTask.new(:rubocop) do |task|
   task.patterns = ['lib/**/*.rb', 'test/**/*.rb']
 end
 
-task :default => [:test, :rubocop]
+task :default => [:spec, :rubocop]
