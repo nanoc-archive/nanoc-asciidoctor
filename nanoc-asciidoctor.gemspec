@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name        = 'nanoc-asciidoctor'
-  s.version     = '2.0.0'
+  s.version     = '2.0.1'
   s.homepage    = 'http://nanoc.ws/'
   s.summary     = '(Obsolete) Asciidoctor filter for Nanoc'
   s.description = 'Provides an Asciidoctor filter for Nanoc. Obsolete; merged into Nanoc 4.8.'
