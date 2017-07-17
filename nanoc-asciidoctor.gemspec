@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.email   = 'denis@stoneship.org'
   s.license = 'MIT'
 
-  s.files = Dir['[A-Z]*'] + ['nanoc-asciidoctor.gemspec']
+  s.files = `git ls-files -z`.split("\x0")
   s.require_paths = ['lib']
 
   s.add_runtime_dependency('nanoc', '~> 4.8')
